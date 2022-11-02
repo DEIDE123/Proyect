@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blooger</title>
+    <link rel="icon" type="image/x-icon" href="./assets/Nazaret.png">
+    <!-- Jquery Library file -->
+    <script src="./js/Jquery3.4.1.min.js"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="./js/owl.carousel.min.js"></script>
+ 
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="./js/aos.js"></script>
+ 
+    <!-- Custom Javascript file -->
+    <script src="./js/main.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="./css/Style.css">
+
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a target="_blank" href="http://www.nazaret.eus/es/" class="" class="text-gray">Nazaret </a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="./Inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./Eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./Agenda.html">Agenda</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./Inscripcion.html">Inscripción</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./Contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="./About Us.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+    <div class="container">
+        <div class="item_wrap">
+            <div class="login">
+                <div class="login-header">
+                  <h1>Inscripcion</h1>
+                </div>
+                <div class="login-form">
+                    <form action="submeter-formulario.php" method="post">       
+                  <h3>Nombre:</h3>
+                  <span class="obligatorio">*</span>
+                  <input type="text" name="introducir_Nombre" id="Nombre" required="obligatorio" placeholder="Escribe tu Nombre">
+                  <h3>Email:</h3>
+                  <span class="obligatorio">*</span>
+                  <input type="text" name="introducir_Email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
+                  
+                  
+                  <br>
+                  <h3>Empresa:</h3>
+                  <span class="obligatorio">*</span>
+                  <input type="text" name="introducir_Nombre" id="Empresa" required="obligatorio" placeholder="Escribe tu Empresa">
+                  <h3>Telefono:</h3>
+                  <span class="obligatorio">*</span>
+                  <input type="number" name="introducir_telefono" id="nombre" required="obligatorio" placeholder="Escribe tu Telefono">
+                  <br>
+                  <!--los campos de las inscribcion-->
+                  
+              
+                  <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+        
+                  <p class="aviso">
+                    <span class="obligatorio"> * </span>los campos son obligatorios.
+                  </p>          
+              
+            </form>
+                <!--para enviar la inscribcion tendra que aceptar las condiciones-->
+        </div>
+    </div>  
+
+
+</body>
+
+</html>
