@@ -90,24 +90,38 @@
                   <h1>Inscripcion</h1>
                 </div>
                 <div class="login-form">
+                    <form action="submeter-formulario.php" method="post">       
                   <h3>Nombre:</h3>
-                  <input type="text" placeholder="Nombre"/><br>
+                  <span class="obligatorio">*</span>
+                  <input type="text" name="introducir_Nombre" id="Nombre" required="obligatorio" placeholder="Escribe tu Nombre">
                   <h3>Email:</h3>
-                  <input type="text" placeholder="Email"/>
+                  <span class="obligatorio">*</span>
+                  <input type="text" name="introducir_Email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
+                  <br>
+                  <h3>Telefono:</h3>
+                  <span class="obligatorio">*</span>
+                  <input type="number" name="introducir_telefono" id="nombre" required="obligatorio" placeholder="Escribe tu Telefono">
                   <br>
                   <h3>Empresa:</h3>
-                  <input type="text" placeholder="Empresa"/><br>
+                  <span class="obligatorio">*</span>
+                  <input type="text" name="introducir_Nombre" id="Empresa" required="obligatorio" placeholder="Escribe tu Empresa">
                   <h3>Telefono:</h3>
-                  <input type="number" placeholder="Telefono"/>
+                  <span class="obligatorio">*</span>
+                  <input type="number" name="introducir_telefono" id="nombre" required="obligatorio" placeholder="Escribe tu Telefono">
                   <br>
+                  <!--los campos de las inscribcion-->
                   
-                  
-              </div>
-              <form action="procesar_datos.php" method="post">
-                  <label for="condiciones">Acepto las condiciones del servicio y la política de privacidad de google </label><input type="checkbox" name="condiciones" />
-                  <input type="submit" value="Enviar" />
-                </form>
+              
+                  <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+        
+                  <p class="aviso">
+                    <span class="obligatorio"> * </span>los campos son obligatorios.
+                  </p>          
+              
+            </form>
+                <!--para enviar la inscribcion tendra que aceptar las condiciones-->
         </div>
+    </div>  
 
 
 </body>

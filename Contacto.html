@@ -86,6 +86,10 @@
 
     <main>
         <div class="contact_form">
+          <div class="container">
+            <div class="item_wrap">
+                <div class="login">
+                    <div class="login-header">
 
             <div class="formulario">      
               <h1>Formulario de contacto</h1>
@@ -95,55 +99,41 @@
                   <form action="submeter-formulario.php" method="post">       
         
                     
-                        <p>
-                          <label for="nombre" class="colocar_nombre">Nombre
-                            <span class="obligatorio">*</span>
-                          </label>
-                            <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-                        </p>
-                      
-                        <p>
-                          <label for="email" class="colocar_email">Email
-                            <span class="obligatorio">*</span>
-                          </label>
-                            <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                        </p>
+                    <h3>Nombre:</h3>
+                    <span class="obligatorio">*</span>
+                    <input type="text" name="introducir_Nombre" id="Nombre" required="obligatorio" placeholder="Escribe tu Nombre">
+                    <h3>Email:</h3>
+                    <span class="obligatorio">*</span>
+                    <input type="text" name="introducir_Email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
+                    <br>
+                    <h3>Telefono:</h3>
                     
-                        <p>
-                          <label for="telefone" class="colocar_telefono">Teléfono
-                          </label>
-                            <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                        </p>    
-                      
-                        <p>
-                          <label for="website" class="colocar_website">Sitio web
-                          </label>
-                            <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
-                        </p>    
-                      
-                        <p>
-                          <label for="asunto" class="colocar_asunto">Asunto
-                            <span class="obligatorio">*</span>
-                          </label>
-                            <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
-                        </p>    
-                      
-                        <p>
-                          <label for="mensaje" class="colocar_mensaje">Mensaje
-                            <span class="obligatorio">*</span>
-                          </label>                     
-                                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                                        </p>                    
-                      
-                        <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+                    <input type="number" name="introducir_telefono" id="nombre" required="obligatorio" placeholder="Escribe tu Telefono">
+                    <br>
+                    <h3>Sitio Web:</h3>
+                    
+                    <input type="url" name="introducir_website" id="URL" required="obligatorio" placeholder="Escribe tu URL">
+                    <br>
+                    <h3>Asunto:</h3>
+                    <span class="obligatorio">*</span>
+                    <input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe tu Asunto">
+                    <br>
+                    <h3>Mensaje:</h3>
+                    <span class="obligatorio">*</span>
+                    <input type="text" name="introducir_mensaje" id="mensaje" required="obligatorio" placeholder="Escribe tu Mensaje">
+                    <br>
+                    <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
         
-                        <p class="aviso">
-                          <span class="obligatorio"> * </span>los campos son obligatorios.
-                        </p>          
-                    
-                  </form>
-            </div>  
-          </div>
+                  <p class="aviso">
+                    <span class="obligatorio"> * </span>los campos son obligatorios.
+                  </p>          
+              
+            </form>
+                <!--para enviar la inscribcion tendra que aceptar las condiciones-->
+        </div>
+    </div>  
+
+
 </body>
 
 </html>
