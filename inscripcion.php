@@ -21,7 +21,7 @@ Telefóno: <?php echo $telefono; ?><br>
 $servidor = "localhost";
 $usuario = "root";
 $password = "";
-$basedatos = "contacto0";
+$basedatos = "deide";
 
 // Crear conexión
 $conn = new mysqli($servidor, $usuario, $password, $basedatos);
