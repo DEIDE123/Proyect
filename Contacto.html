@@ -18,6 +18,8 @@
  
     <!-- Custom Javascript file -->
     <script src="./js/main.js"></script>
+    <!-- Custom Javascript file -->
+    <script src="./js/contacto.js"></script>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="./css/all.css">
@@ -85,6 +87,16 @@
     <!----------------------------- Main Site Section ------------------------------>
 
     <main>
+        <script>
+            function validarFormulario() {
+                var y=document.forms["formulario"]["condiciones"].checked;
+        
+                if (y == false) {
+                    alert("Tienes que aceptar los términos y condiciones");
+                    return false;
+                }
+            }
+        </script>
         <div class="contact_form">
           <div class="container">
             <div class="item_wrap">
@@ -96,24 +108,20 @@
                 <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
         
         
-                  <form action="submeter-formulario.php" method="post">       
+                  <form name=contacto action="./php/index.php" onsubmit="return validarContacto()" method="POST">       
         
                     
                     <h3>Nombre:</h3>
-                    <span class="obligatorio">*</span>
-                    <input type="text" name="introducir_Nombre" id="Nombre" required="obligatorio" placeholder="Escribe tu Nombre">
+                
+                    <input class="textfield" type="text" id="nombreApellido" name="NombreApellido" required="obligatorio" placeholder="Escribe tu Nombre">
+                    
                     <h3>Email:</h3>
                     <span class="obligatorio">*</span>
                     <input type="text" name="introducir_Email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
                     <br>
                     <h3>Telefono:</h3>
                     
-                    <input type="number" name="introducir_telefono" id="nombre"  placeholder="Escribe tu Telefono">
-                    <br>
-                    <h3>Sitio Web:</h3>
-                    
-                    <input type="url" name="introducir_website" id="URL"  placeholder="Escribe tu URL">
-                    <br>
+                    <input type="number" name="introducir_telefono" id="Telefono"  placeholder="Escribe tu Telefono">                                        
                     <h3>Asunto:</h3>
                     <span class="obligatorio">*</span>
                     <input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe tu Asunto">
@@ -122,7 +130,7 @@
                     <span class="obligatorio">*</span>
                     <input type="text" name="introducir_mensaje" id="mensaje" required="obligatorio" placeholder="Escribe tu Mensaje">
                     <br>
-                    <input type="button" value="Enviar" class="login-button"/>
+                    <input class="btn-submit" type="submit" id="enviar" value="Inscribir"/>
         
                   <p class="aviso">
                     <span class="obligatorio"> * </span>los campos son obligatorios.
