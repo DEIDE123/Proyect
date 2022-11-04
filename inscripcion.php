@@ -3,25 +3,25 @@
 
 <?php
     $nombreApellido=$_POST['nombreApellido'];
-    $Email=$_POST['Email'];
-    $Telefono=$_POST['Telefono'];
-    $Asunto=$_POST["Asunto"];
-    $Mensaje=$_POST["Mensaje"];
+    $genero=$_POST['genero'];
+    $localidad=$_POST['localidad'];
+    $email=$_POST["email"];
+    $telefono=$_POST["telefono"];
 
 ?>   
 
 Datos recibidos:<br>
 Nombre y Apellido: <?php echo $nombreApellido; ?><br>
-Email: <?php echo $Email; ?><br>
-Telefono: <?php echo $Telefono; ?><br>
-Asunto: <?php echo $Asunto; ?><br>
-Mensaje: <?php echo $Mensaje; ?><br>
+Genéro: <?php echo $genero; ?><br>
+Localidad: <?php echo $localidad; ?><br>
+Email: <?php echo $email; ?><br>
+Telefóno: <?php echo $telefono; ?><br>
 
 <?php
 $servidor = "localhost";
 $usuario = "root";
 $password = "";
-$basedatos = "deide";
+$basedatos = "contacto0";
 
 // Crear conexión
 $conn = new mysqli($servidor, $usuario, $password, $basedatos);
@@ -30,8 +30,8 @@ if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO contacto (nombreApellido, Email, Telefono, Asunto, Mensaje)
-VALUES ('$nombreApellido', '$Email', '$Telefono', '$Mensaje', '$Asunto')";
+$sql = "INSERT INTO inscripcion (nombreApellido, genero, localidad, email, telefono)
+VALUES ('$nombreApellido', '$genero', '$localidad', '$email', '$telefono' )";
 
 if ($conn->query($sql) === TRUE) {
   echo "Dado de alta satisfactoriamente";
