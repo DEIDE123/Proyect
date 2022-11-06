@@ -72,10 +72,9 @@
                 </ul>
             </div>
             <div class="social text-gray">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a target="_blank" href="https://github.com/DEIDE123"><i class="fab fa-github"></i></a>                
+                <a target="_blank"htref="#"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href=""><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </nav>
@@ -85,13 +84,13 @@
     <!----------------------------- Main Site Section ------------------------------>
     <div class="container">
         <div class="item_wrap">
-            <div class="login">
+                
                 <div class="login-header">
                   <h1>Inscripcion</h1>
                 </div>
-                <div class="login-form">
-                    <form action="submeter-formulario.php" method="post">       
-                  <h3>Nombre y Apellido:</h3>
+                
+                <form name= eventos action="./inscripcion.php" method="post">       
+                  <h3>Nombre y 1ª Apellido:</h3>
                   <span class="obligatorio">*</span>
                   <input type="text" name="nombreApellido" id="Nombre" required="obligatorio" placeholder="Escribe tu Nombre">
                   <h3>Genéro:</h3>
@@ -113,13 +112,13 @@
                   <!--los campos de las inscribcion-->
                   
               
-                  <input type="button" value="Enviar" class="login-button"/>
+                  <input class="fas fa-arrow-right" type="submit" id="enviar" value="Enviar">  &nbsp; </input>
         
                   <p class="aviso">
                     <span class="obligatorio"> * </span>los campos son obligatorios.
                   </p>          
               
-            </form>
+                </form>
                 <!--para enviar la inscribcion tendra que aceptar las condiciones-->
         </div>
     </div>  

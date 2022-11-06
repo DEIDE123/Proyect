@@ -74,10 +74,9 @@
                 </ul>
             </div>
             <div class="social text-gray">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a target="_blank" href="https://github.com/DEIDE123"><i class="fab fa-github"></i></a>                
+                <a target="_blank"htref="#"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href=""><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </nav>
@@ -108,27 +107,27 @@
                     <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
         
                 </div>
-                <form name=contacto action="./Contacto.php" onsubmit="return validarFormulario()" method="POST">       
+                <form name=eventos action="./Contacto.php" onsubmit="return validarFormulario()" method="POST">       
         
                     
-                    <h3>Nombre:</h3>
+                    <h3>Nombre y 1ª Apellido:</h3>
                 
                     <input class="textfield" type="text" id="nombreApellido" name="nombreApellido" required="obligatorio" placeholder="Escribe tu Nombre">
                     
                     <h3>Email:</h3>
                     <span class="obligatorio">*</span>
-                    <input type="text" name="Email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
+                    <input type="text" name="email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
                     <br>
                     <h3>Telefono:</h3>
                     
-                    <input type="number" name="Telefono" id="Telefono"  placeholder="Escribe tu Telefono">                                        
+                    <input type="number" name="telefono" id="Telefono"  placeholder="Escribe tu Telefono">                                        
                     <h3>Asunto:</h3>
                     <span class="obligatorio">*</span>
-                    <input type="text" name="Asunto" id="asunto" required="obligatorio" placeholder="Escribe tu Asunto">
+                    <input type="text" name="asunto" id="asunto" required="obligatorio" placeholder="Escribe tu Asunto">
                     <br>
                     <h3>Mensaje:</h3>
                     <span class="obligatorio">*</span>
-                    <input type="text" name="Mensaje" id="mensaje" required="obligatorio" placeholder="Escribe tu Mensaje">
+                    <input type="text" name="mensaje" id="mensaje" required="obligatorio" placeholder="Escribe tu Mensaje">
                     <br><br>
                     <input class="fas fa-arrow-right" type="submit" id="enviar" value="Enviar">  &nbsp; </input>
                     
@@ -153,8 +152,11 @@
                 <h2>Informaté</h2>
                 <p>Ponte al día</p>
                 <div class="form-element">
-                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
-                </div>
+                    <form name=eventos action="./spam.php" method="post">
+                        <input type="text" placeholder="Email" type="submit" id="enviar"class="fas fa-chevron-right">
+                        <span><input type="submit" id="enviar"class="fas fa-chevron-right"></input></span>
+                        
+                    </form>
             </div>
             
             <div class="follow" data-aos="fade-left" data-aos-delay="200">

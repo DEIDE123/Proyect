@@ -1,37 +1,37 @@
 <html>
 <body>
-
+<!---------------------------Declaration of variables------------------------->
 <?php
     $nombreApellido=$_POST['nombreApellido'];
-    $Email=$_POST['Email'];
-    $Telefono=$_POST['Telefono'];
-    $Asunto=$_POST["Asunto"];
-    $Mensaje=$_POST["Mensaje"];
+    $email=$_POST['email'];
+    $telefono=$_POST['telefono'];
+    $asunto=$_POST["asunto"];
+    $mensaje=$_POST["mensaje"];
 
 ?>   
-
+<!----------------------------Data save------------------------------------->
 Datos recibidos:<br>
 Nombre y Apellido: <?php echo $nombreApellido; ?><br>
-Email: <?php echo $Email; ?><br>
-Telefono: <?php echo $Telefono; ?><br>
-Asunto: <?php echo $Asunto; ?><br>
-Mensaje: <?php echo $Mensaje; ?><br>
+Email: <?php echo $email; ?><br>
+Telefono: <?php echo $telefono; ?><br>
+Asunto: <?php echo $asunto; ?><br>
+Mensaje: <?php echo $mensaje; ?><br>
 
 <?php
 $servidor = "localhost";
 $usuario = "root";
 $password = "";
-$basedatos = "deide";
+$basedatos = "eventos";
 
-// Crear conexión
+// make conexion
 $conn = new mysqli($servidor, $usuario, $password, $basedatos);
-// Checkear conexión
+// Check conexion
 if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
-
-$sql = "INSERT INTO contacto (nombreApellido, Email, Telefono, Asunto, Mensaje)
-VALUES ('$nombreApellido', '$Email', '$Telefono', '$Mensaje', '$Asunto')";
+//sql format
+$sql = "INSERT INTO consulta (nombreApellido, email, telefono, asunto, mensaje)
+VALUES ('$nombreApellido', '$email', '$telefono', '$mensaje', '$asunto')";
 
 if ($conn->query($sql) === TRUE) {
   echo "Dado de alta satisfactoriamente";
@@ -39,7 +39,7 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-// Cerrar conexión
+// close conexion
 $conn->close();
 ?>
 
