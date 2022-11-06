@@ -18,7 +18,8 @@
  
     <!-- Custom Javascript file -->
     <script src="./js/main.js"></script>
-
+    <!--php-->>
+    <script src="./js/php.js"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="./css/all.css">
 
@@ -89,30 +90,49 @@
                   <h1>Inscripcion</h1>
                 </div>
                 
-                <form name= eventos action="./inscripcion.php" method="post">       
+                <form name= eventos action="./inscripcion.php" method="post" id="formulario">       
                   <h3>Nombre y 1ª Apellido:</h3>
                   <span class="obligatorio">*</span>
                   <input type="text" name="nombreApellido" id="Nombre" required="obligatorio" placeholder="Escribe tu Nombre">
-                  <h3>Genéro:</h3>
-                  <span class="obligatorio">*</span>
-                  <input type="text" name="genero" id="genero" required="obligatorio" placeholder="Elige tu genero">
+                  <div class="radio">
+                        <h3>Genéro:</h3>
+                        <span class="obligatorio">*</span>
+                        <input type="radio" name="genero" id="hombre" required="obligatorio" >
+                        <label for="hombre">Hombre</label>
+                        <input type="radio" name="genero" id="mujer" required="obligatorio" >
+                        <label for="hombre">Mujer</label>
+                        <input type="radio" name="genero" id="otro" required="obligatorio" >
+                        <label for="hombre">Otro/No lo sé</label>
+                  </div>
                   <h3>Email:</h3>
-                  <span class="obligatorio">*</span>
-                  <input type="text" name="email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
+                    <span class="obligatorio">*</span>
+                    <input type="text" name="email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
                   
                   
-                  <br>
+                    <br>
                   <h3>Localidad:</h3>
-                  <span class="obligatorio">*</span>
-                  <input type="text" name="localidad" id="Localidad" required="obligatorio" placeholder="Elige tu localidad">
+                    <span class="obligatorio">*</span>                 
+                    <select name="localidad" size="4" multiple>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
                   <h3>Telefono:</h3>
                   <span class="obligatorio">*</span>
                   <input type="text" name="telefono" id="nombre" placeholder="Escribe tu Telefono">
                   <br>
-                  <!--los campos de las inscribcion-->
+                  <div class="temrs">
+                    <input type="checkbox" name="terminos">
+                    <label for="terms"><a href="./htmldepolicita">Acepto las condiciones </a></label>
+                  </div>
+                  <!--Form -->
                   
               
-                  <input class="fas fa-arrow-right" type="submit" id="enviar" value="Enviar">  &nbsp; </input>
+                  <input class="fas fa-arrow-right" type="submit" id="enviar" name="submit" disabled>
         
                   <p class="aviso">
                     <span class="obligatorio"> * </span>los campos son obligatorios.
@@ -122,6 +142,48 @@
                 <!--para enviar la inscribcion tendra que aceptar las condiciones-->
         </div>
     </div>  
+    <!----------------------------- Main Site Section ------------------------------>
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+           
+            <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+                <h2>Informaté</h2>
+                <p>Ponte al día</p>
+                <div class="form-element">
+                    <form name=eventos action="./spam.php" method="post">
+                        <input type="text" placeholder="Email" type="submit" id="enviar"class="fas fa-chevron-right">
+                        <span><input type="submit" id="enviar"class="fas fa-chevron-right"></input></span>
+                        
+                    </form>
+                    
+                   
+                </div>
+            </div>
+            
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Siguemé en </h2>
+                <p>Nuestras redes socilaes</p>
+                <div>
+                    <a target="_blank" href="https://github.com/DEIDE123"><i class="fab fa-github"></i></a>                
+                    <a target="_blank"htref="#"><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href=""><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2022 Derechos  reseervados | Creado por DEIDE
+                
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
 
 
 </body>
