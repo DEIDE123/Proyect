@@ -93,7 +93,7 @@
                 <form name= eventos action="./inscripcion.php" method="post" id="formulario">       
                   <h3>Nombre y 1ª Apellido:</h3>
                   <span class="obligatorio">*</span>
-                  <input type="text" name="nombreApellido" id="Nombre" required="obligatorio" placeholder="Escribe tu Nombre">
+                  <input type="text" name="nombreApellido" id="Nombre" required="obligatorio" placeholder="Escribe tu Nombre y Apellido">
                   <div class="radio">
                         <h3>Genéro:</h3>
                         <span class="obligatorio">*</span>
@@ -112,15 +112,24 @@
                     <br>
                   <h3>Localidad:</h3>
                     <span class="obligatorio">*</span>                 
-                    <select name="localidad" size="4" multiple>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                    </select>
+                    <select name="ciudad">
+                        
+                          <option>Madrid</option>
+                          <option>Barcelona</option>
+                          <option>Valencia</option>
+                       
+                        
+                          <option>Sevilla</option>
+                          <option>San Sebastian</option>
+                          <option>Bilbao</option>
+                          <option>Zaragoza</option>
+                        
+                          
+                          <option>Málaga</option>
+                          <option>Las Palmas de Gran Canaria</option>
+                          <option> extranjero </option>
+                        
+                      </select>
                   <h3>Telefono:</h3>
                   <span class="obligatorio">*</span>
                   <input type="text" name="telefono" id="nombre" placeholder="Escribe tu Telefono">
@@ -132,11 +141,12 @@
                   <!--Form -->
                   
               
-                  <input class="fas fa-arrow-right" type="submit" id="enviar" name="submit" disabled>
+                  <input class="fas fa-arrow-right" type="submit" id="enviar" value="Enviar">  &nbsp; </input>
+                    
         
                   <p class="aviso">
                     <span class="obligatorio"> * </span>los campos son obligatorios.
-                  </p>          
+                  </p>             
               
                 </form>
                 <!--para enviar la inscribcion tendra que aceptar las condiciones-->
