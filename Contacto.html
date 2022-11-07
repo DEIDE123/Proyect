@@ -19,8 +19,9 @@
     <!-- Custom Javascript file -->
     <script src="./js/main.js"></script>
     <!-- Custom Javascript file -->
-    <script src="./js/php.js"></script>
-
+    <script src="./js/form.js"></script>
+    <!-- Costum Froms csss-->
+    <link rel="stylesheet" href="./css/fo7m.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="./css/all.css">
 
@@ -86,65 +87,39 @@
     <!----------------------------- Main Site Section ------------------------------>
 
     <main>
-        <script>
-            function validarFormulario() {
-                var y=document.forms["formulario"]["condiciones"].checked;
-        
-                if (y == false) {
-                    alert("Tienes que aceptar los términos y condiciones");
-                    return false;
-                }
-            }
-        </script>
-        <div class="contact_form">
-          <div class="container">
+        <div class="container">
             <div class="item_wrap">
-                <div class="login">
-                    <main class="login-header">
-
-                 
-                    <h1>Formulario de contacto</h1>
-                    <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
-        
+                <div class="wrapper">
+                    <h2>Contacto</h2>
+                    <div id="error_message"></div>
+                    <form id="myform" onsubmit="return validate();" name= eventos action="./contacto.php" method="post" id="formulario">
+                        <div class="input_field">
+                            <input type="text" placeholder="Nombre y 1ª Apellido" id="name" name="nombreApellido">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" placeholder="Asunto" id="subject" name="asunto">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" placeholder="Numero" id="phone" name="telefono">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" placeholder="Email" id="email" name="email">
+                        </div>
+                        <div class="input_field">
+                        <textarea placeholder="Mensaje" id="message" name="mensaje"></textarea>
+                        </div>
+                        <div class="btn">
+                            <input type="submit">
+                        </div>
+                    </form>
                 </div>
-                <form name=eventos action="./Contacto.php" onsubmit="return validarFormulario()" method="POST">       
-        
-                    
-                    <h3>Nombre y 1ª Apellido:</h3>
-                
-                    <input class="textfield" type="text" id="nombreApellido" name="nombreApellido" required="obligatorio" placeholder="Escribe tu Nombre">
-                    
-                    <h3>Email:</h3>
-                    <span class="obligatorio">*</span>
-                    <input type="text" name="email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
-                    <br>
-                    <h3>Telefono:</h3>
-                    
-                    <input type="number" name="telefono" id="Telefono"  placeholder="Escribe tu Telefono">                                        
-                    <h3>Asunto:</h3>
-                    <span class="obligatorio">*</span>
-                    <input type="text" name="asunto" id="asunto" required="obligatorio" placeholder="Escribe tu Asunto">
-                    <br>
-                    <h3>Mensaje:</h3>
-                    <span class="obligatorio">*</span>
-                    <input type="text" name="mensaje" id="mensaje" required="obligatorio" placeholder="Escribe tu Mensaje">
-                    <br><br>
-                    <input class="fas fa-arrow-right" type="submit" id="enviar" value="Enviar">  &nbsp; </input>
-                    
-        
-                  <p class="aviso">
-                    <span class="obligatorio"> * </span>los campos son obligatorios.
-                  </p>          
-              
-                </form>
-          <!--para enviar la inscribcion tendra que aceptar las condiciones-->
+            </div>
         </div>
     </main>  
     <!---------------x------------- Main Site Section ---------------x-------------->
 
 
     <!-- --------------------------- Footer ---------------------------------------- -->
-
     <footer class="footer">
         <div class="container">
            
@@ -157,6 +132,9 @@
                         <span><input type="submit" id="enviar"class="fas fa-chevron-right"></input></span>
                         
                     </form>
+                    
+                   
+                </div>
             </div>
             
             <div class="follow" data-aos="fade-left" data-aos-delay="200">
@@ -179,7 +157,10 @@
             <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
         </div>
     </footer>
-    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    
 
 </body>
 
