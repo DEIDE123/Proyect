@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blooger</title>
+    <title>EIDE</title>
     <link rel="icon" type="image/x-icon" href="./assets/Nazaret.png">
     <!-- Jquery Library file -->
     <script src="./js/Jquery3.4.1.min.js"></script>
+    <!--costum js inscrib-->
+    <script src="./js/inscrib.js"> </script>
 
     <!-- --------- Owl-Carousel js ------------------->
     <script src="./js/owl.carousel.min.js"></script>
@@ -43,7 +45,7 @@
     <nav class="nav">
         <div class="nav-menu flex-row">
             <div class="nav-brand">
-                <a target="_blank" href="http://www.nazaret.eus/es/" class="" class="text-gray">Nazaret </a>
+                <a target="_blank" href="http://www.nazaret.eus/es/"  class="text-gray">Nazaret </a>
             </div>
             <div class="toggle-collapse">
                 <div class="toggle-icons">
@@ -90,20 +92,20 @@
                 <form name= eventos action="./inscripcion.php" method="post" id="formulario">       
                   <h3>Nombre y 1ª Apellido:</h3>
                   <span class="obligatorio">*</span>
-                  <input type="text" name="nombreApellido" id="Nombre" required="obligatorio" placeholder="Escribe tu Nombre y Apellido">
+                  <input type="text" name="nombreApellido" id="nombreApellido" required="obligatorio" placeholder="Escribe tu Nombre y Apellido">
                   <div class="radio">
                         <h3>Genéro:</h3>
                         <span class="obligatorio">*</span>
-                        <input type="radio" name="genero" id="hombre" required="obligatorio" >
+                        <input type="radio" name="genero" id="genero" required="obligatorio" >
                         <label for="hombre">Hombre</label>
-                        <input type="radio" name="genero" id="mujer" required="obligatorio" >
+                        <input type="radio" name="genero" id="genero" required="obligatorio" >
                         <label for="hombre">Mujer</label>
-                        <input type="radio" name="genero" id="otro" required="obligatorio" >
+                        <input type="radio" name="genero" id="genero" required="obligatorio" >
                         <label for="hombre">Otro/No lo sé</label>
                   </div>
                   <h3>Email:</h3>
                     <span class="obligatorio">*</span>
-                    <input type="text" name="email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
+                    <input type="text" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
                   
                   
                     <br>
@@ -111,25 +113,25 @@
                     <span class="obligatorio">*</span>                 
                     <select name="ciudad">
                         
-                          <option>Madrid</option>
-                          <option>Barcelona</option>
-                          <option>Valencia</option>
+                          <option id="ciudad">Madrid</option>
+                          <option id="ciudad">Barcelona</option>
+                          <option id="ciudad">Valencia</option>
                        
                         
-                          <option>Sevilla</option>
-                          <option>San Sebastian</option>
-                          <option>Bilbao</option>
-                          <option>Zaragoza</option>
+                          <option id="ciudad">Sevilla</option>
+                          <option id="ciudad">San Sebastian</option>
+                          <option id="ciudad">Bilbao</option>
+                          <option id="ciudad">Zaragoza</option>
                         
                           
-                          <option>Málaga</option>
-                          <option>Las Palmas de Gran Canaria</option>
-                          <option> extranjero </option>
+                          <option id="ciudad">Málaga</option>
+                          <option id="ciudad">Las Palmas de Gran Canaria</option>
+                          <option id="ciudad"> extranjero </option>
                         
                       </select>
                   <h3>Telefono:</h3>
                   <span class="obligatorio">*</span>
-                  <input type="text" name="telefono" id="nombre" placeholder="Escribe tu Telefono">
+                  <input type="text" name="telefono" id="telefono" placeholder="Escribe tu Telefono">
                   <br>
                   <div class="temrs">
                     <input type="checkbox" name="terminos">
