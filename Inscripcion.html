@@ -89,26 +89,26 @@
                   <h1>Inscripcion</h1>
                 </div>
                 
-                <form name= eventos action="./inscripcion.php" method="post" id="formulario">       
+                <form id="myform" onsubmit="return validate();" name= eventos action="./inscripcion.php" method="post" id="formulario">       
                   <h3>Nombre y 1ª Apellido:</h3>
                   <span class="obligatorio">*</span>
-                  <input type="text" name="nombreApellido" id="nombreApellido" required="obligatorio" placeholder="Escribe tu Nombre y Apellido">
+                  <input type="text" name="nombreApellido" id="name" required="obligatorio" placeholder="Escribe tu Nombre y Apellido">
                   <div class="radio">
                         <h3>Genéro:</h3>
                         <span class="obligatorio">*</span>
-                        <input type="radio" name="genero" id="genero" required="obligatorio" >
+                        <input type="radio" name="genero" id="genero" required >
                         <label for="hombre">Hombre</label>
-                        <input type="radio" name="genero" id="genero" required="obligatorio" >
+                        <input type="radio" name="genero" id="genero" required >
                         <label for="hombre">Mujer</label>
-                        <input type="radio" name="genero" id="genero" required="obligatorio" >
+                        <input type="radio" name="genero" id="genero" required >
                         <label for="hombre">Otro/No lo sé</label>
                   </div>
-                  <div class="temrs">
+                  <div class="eventos" >
                     <h3>Evento:</h3>
-                    <input type="checkbox" name="terminos"><br>
-                    <input type="checkbox" name="terminos"><br>
-                    <input type="checkbox" name="terminos"><br>
-                    <input type="checkbox" name="terminos"><br>
+                    <input type="checkbox" id=""name="idEvento" >IndustrySec 2023<br>
+                    <input type="checkbox" id=""name="idEvento" >Realidad Virtual en Nazaret Games Week<br>
+                    <input type="checkbox" id=""name="idEvento" >Evento sobre industria 4.0, I.A. y robótica.<br>
+                    <input type="checkbox" id=""name="idEvento" >Charla con Elon Musk<br>
                     
                     
                   </div>
@@ -140,17 +140,21 @@
                       </select>
                   <h3>Telefono:</h3>
                   <span class="obligatorio">*</span>
-                  <input type="text" name="telefono" id="telefono" placeholder="Escribe tu Telefono">
+                  <input type="text" name="telefono" id="phone" placeholder="Escribe tu Telefono">
                   <br>
-                  <div class="temrs">
-                    <input type="checkbox" name="terminos">
-                    <label for="terms"><a href="./htmldepolicita">Acepto las condiciones </a></label>
-                  </div>
+                    <div class="terms-container">
+                        <div class="terms-checkbox-container">
+                            <input class="acceptterms" type="checkbox" name="condiciones" value="agree_terms">
+                        </div>
+                        <div class="terms-text-container">
+                            Acepto los Términos y Condiciones
+                        </div>
+                    </div>
                   <!--Form -->
                   
               
-                  <input class="fas fa-arrow-right" type="submit" id="enviar" value="Enviar">  &nbsp; </input>
-                    
+                  <input class="fas fa-arrow-right" type="submit" id="enviar" >  &nbsp; </input>
+                  <input class="btn-submit" type="submit" id="enviar" value="Inscribir"/>
         
                   <p class="aviso">
                     <span class="obligatorio"> * </span>los campos son obligatorios.
