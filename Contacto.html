@@ -84,31 +84,39 @@
     <!----------------------------- Main Site Section ------------------------------>
 
     <main>
+        <div class="container">
+            <class="item_wrap">
         
             
-                    <h2>Contacto</h2>
-                    <div id="error_message"></div>
-                    <form id="myform" onsubmit="return validate();" name= eventos action="./contacto.php" method="post" id="formulario">
-                        <div class="input_field">
-                            <input type="text" placeholder="Nombre y 1ª Apellido" id="name" name="nombreApellido">
-                        </div>
-                        <div class="input_field">
-                            <input type="text" placeholder="Asunto" id="subject" name="asunto">
-                        </div>
-                        <div class="input_field">
-                            <input type="text" placeholder="Numero" id="phone" name="telefono">
-                        </div>
-                        <div class="input_field">
-                            <input type="text" placeholder="Email" id="email" name="email">
-                        </div>
-                        <div class="input_field">
-                        <textarea placeholder="Mensaje" id="message" name="mensaje"></textarea>
-                        </div>
-                        <div class="btn">
-                            <input type="submit">
-                        </div>
-                    </form>
-                </div>
+                <h2>Contacto</h2>
+                <div id="error_message"></div>
+                <form id="myform" onsubmit="return validate();" name= eventos action="./contacto.php" method="post" id="formulario">
+                    <h3>Nombre y 1ªApellido :</h3>
+                       
+                    <div class="input_field">
+                        <input type="text" placeholder="Nombre y 1ª Apellido" id="name" name="nombreApellido">
+                    </div>
+                    <h3>Asunto :</h3>
+                    <div class="input_field">
+                        <input type="text" placeholder="Asunto" id="subject" name="asunto">
+                    </div>
+                    <h3>Teléfono :</h3>
+                    <div class="input_field">
+                        <input type="text" placeholder="Numero" id="phone" name="telefono">
+                    </div>
+                    <h3>Email :</h3>
+                    <div class="input_field">
+                        <input type="text" placeholder="Email" id="email" name="email">
+                    </div>
+                    <h3>Mensaje</h3>
+                    <div class="input_field">
+                    <textarea placeholder="Mensaje" id="message" name="mensaje"></textarea>
+                    </div>
+                    <div class="btn">
+                        <input type="submit">
+                    </div>
+                </form>
+                
             </div>    
         </div>
     </main>  
