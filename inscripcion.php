@@ -4,10 +4,27 @@
 <?php
     $nombreApellido=$_POST['nombreApellido'];
    
-    $email=$_POST["email"];
+    $email=$_POST['email'];
   
-    $telefono=$_POST["telefono"];
+    $telefono=$_POST['telefono'];
 
+    $evento='';
+   
+  if(isset( $_POST['opcion1'])){
+    $evento=$evento.''. $_POST['opcion1'];
+  }
+  if(isset( $_POST['opcion2'])){
+    $evento=$evento.''. $_POST['opcion2'];
+  }
+  if(isset( $_POST['opcion3'])){
+    $evento=$evento.''. $_POST['opcion3'];
+  }
+  if(isset( $_POST['opcion4'])){
+    $evento=$evento.''. $_POST['opcion4'];
+  }
+/*if(isset($_POST['opcion'])){
+  $evento=implode('//', $_POST['opcion'])
+}*/
 ?>   
 
 Datos recibidos:<br>
@@ -16,6 +33,8 @@ Nombre y Apellido: <?php echo $nombreApellido; ?><br>
 Email: <?php echo $email; ?><br>
 
 Telefóno: <?php echo $telefono; ?><br>
+
+Eventos: <?php echo $evento; ?><br>
 
 <?php
 $servidor = "localhost";
@@ -30,8 +49,9 @@ if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
 //sql format
-$sql = "INSERT INTO particular (nombreApellido, email, telefono)
-VALUES ('$nombreApellido','$email', '$telefono' )";
+$sql = "INSERT INTO particular (nombreApellido, email, telefono, evento)
+VALUES ('$nombreApellido','$email', '$telefono','$evento' )";
+
 
 if ($conn->query($sql) === TRUE) {
   echo "Dado de alta satisfactoriamente";
