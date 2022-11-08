@@ -93,16 +93,7 @@
                   <h3>Nombre y 1ª Apellido:</h3>
                   <span class="obligatorio">*</span>
                   <input type="text" name="nombreApellido" id="name" required="obligatorio" placeholder="Escribe tu Nombre y Apellido">
-                  <div class="radio">
-                        <h3>Genéro:</h3>
-                        <span class="obligatorio">*</span>
-                        <input type="radio" name="genero" id="genero" required >
-                        <label for="hombre">Hombre</label>
-                        <input type="radio" name="genero" id="genero" required >
-                        <label for="hombre">Mujer</label>
-                        <input type="radio" name="genero" id="genero" required >
-                        <label for="hombre">Otro/No lo sé</label>
-                  </div>
+                  
                   <div class="eventos" >
                     <h3>Evento:</h3>
                     <input type="checkbox" id=""name="idEvento" >IndustrySec 2023<br>
@@ -118,26 +109,7 @@
                   
                   
                     <br>
-                  <h3>Localidad:</h3>
-                    <span class="obligatorio">*</span>                 
-                    <select name="ciudad">
-                        
-                          <option id="ciudad">Madrid</option>
-                          <option id="ciudad">Barcelona</option>
-                          <option id="ciudad">Valencia</option>
-                       
-                        
-                          <option id="ciudad">Sevilla</option>
-                          <option id="ciudad">San Sebastian</option>
-                          <option id="ciudad">Bilbao</option>
-                          <option id="ciudad">Zaragoza</option>
-                        
-                          
-                          <option id="ciudad">Málaga</option>
-                          <option id="ciudad">Las Palmas de Gran Canaria</option>
-                          <option id="ciudad"> extranjero </option>
-                        
-                      </select>
+                  
                   <h3>Telefono:</h3>
                   <span class="obligatorio">*</span>
                   <input type="text" name="telefono" id="phone" placeholder="Escribe tu Telefono">
@@ -175,9 +147,8 @@
                 <p>Ponte al día</p>
                 <div class="form-element">
                     <form name=eventos action="./spam.php" method="post">
-                        <input type="text" placeholder="Email" type="submit" id="enviar"class="fas fa-chevron-right">
-                        <span><input type="submit" id="enviar"class="fas fa-chevron-right"></input></span>
-                        
+                        <input type="text" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                        <span><input type="submit" id="email" class="fas fa-chevron-right" onclick="validarEmail(document.getElementById('email').value)"></input></span>
                     </form>
                     
                    

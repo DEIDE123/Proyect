@@ -362,7 +362,7 @@
                 <p>Ponte al día</p>
                 <div class="form-element">
                     <form name=eventos action="./spam.php" method="post">
-                        <input type="text" placeholder="Email" type="submit" id="email" class="fas fa-chevron-right">
+                        <input type="text" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
                         <span><input type="submit" id="email" class="fas fa-chevron-right" onclick="validarEmail(document.getElementById('email').value)"></input></span>
                     </form>
                 </div>
