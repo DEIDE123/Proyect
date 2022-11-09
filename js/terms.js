@@ -1,4 +1,3 @@
-
 function validarFormulario() {
  
     var a=document.forms["eventos"]["opcion1"].checked;
@@ -22,5 +21,8 @@ function validarFormulario() {
     alert("Se han guardado los datos correctamente!");
         return true;
 }
+
+
+
 
 
