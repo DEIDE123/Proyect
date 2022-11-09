@@ -14,7 +14,7 @@
 
     <!-- --------- Owl-Carousel js ------------------->
     <script src="./js/owl.carousel.min.js"></script>
- 
+    <script src="./js/terms.js"></script>
     <!-- ------------ AOS js Library  ------------------------- -->
     <script src="./js/aos.js"></script>
  
@@ -120,7 +120,8 @@
                 <br>
                 <div class="terms-container">
                     <div class="terms-checkbox-container">
-                        <input class="acceptterms" type="checkbox" name="condiciones" value="agree_terms">
+                        
+                        <input class="acceptterms" type="checkbox" name="condiciones" value="agree_terms" id="terms" onsubmit="return terms();">
                      </div>
                     <div class="terms-text-container">
                         Acepto los Términos y Condiciones
