@@ -93,7 +93,7 @@
                   <h1>Inscripcion</h1>
                 </div>
                 
-            <form id="myform" onsubmit="return validate();" name= eventos action="./inscripcion.php" method="post" id="formulario">       
+            <form id="myform" name= eventos action="./inscripcion.php" method="post" id="formulario">       
                 <h3>Nombre y 1ª Apellido:</h3>
                 <span class="obligatorio">*</span>
                 <input type="text" name="nombreApellido" id="name" required="obligatorio" placeholder="Escribe tu Nombre y Apellido">
@@ -121,7 +121,7 @@
                 <div class="terms-container">
                     <div class="terms-checkbox-container">
                         
-                        <input class="acceptterms" type="checkbox" name="temrs" value="terms" id="terms" onsubmit="return terms();">
+                        <input class="temrs" type="checkbox" name="temrs" value="terms" id="terms" onclick="return validarFormulario();">
                      </div>
                     <div class="terms-text-container">
                         Acepto los Términos y Condiciones
