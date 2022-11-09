@@ -1,10 +1,10 @@
 function validarFormulario() {
  
-    var a=document.forms["eventos"]["opcion1"].checked;
-    var b=document.forms["eventos"]["opcion2"].checked;
-    var c=document.forms["eventos"]["opcion3"].checked;
-    var i=document.forms["eventos"]["opcion4"].checked;
-    var y=document.forms["eventos"]["terminos"].checked;
+    var a=document.forms["formulario"]["opcion1"].checked;
+    var b=document.forms["formulario"]["opcion2"].checked;
+    var c=document.forms["formulario"]["opcion3"].checked;
+    var i=document.forms["formulario"]["opcion4"].checked;
+    var y=document.forms["formulario"]["terminos"].checked;
 
 
     if ((a == false) && (b == false) && (c == false) && (i == false)){
