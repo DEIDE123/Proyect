@@ -1,13 +1,22 @@
 
 function validarFormulario() {
-    var y=document.forms["eventos"]["terms"].checked;
+ 
+    var a=document.forms["eventos"]["opcion1"].checked;
+    var b=document.forms["eventos"]["opcion2"].checked;
+    var c=document.forms["eventos"]["opcion3"].checked;
+    var i=document.forms["eventos"]["opcion4"].checked;
 
-    if (y == false) {
-        alert("Tienes que aceptar los términos y condiciones");
+    if ((a == false) && (b == false) && (c == false) && (i == false)){
+        alert("Tienes que seleccionar un evento como mínimo");
         return false;
     }
-    alert("Se han guardado los datos correctamente!");
-    return true;
+
+
+
+
+        return true;
+
+
 }
 
 
