@@ -15,7 +15,7 @@
     <!-- --------- Owl-Carousel js ------------------->
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/terms.js"></script>
-    <script src="./js/terminos.js"></script>
+
     <!-- ------------ AOS js Library  ------------------------- -->
     <script src="./js/aos.js"></script>
  
@@ -94,7 +94,7 @@
                   <h1>Inscripcion</h1>
                 </div>
                 
-            <form id="myform" onsubmit="return validarFormulario();" onsubmit="return validarTerminos(); "name= eventos action="./inscripcion.php" method="post" id="formulario">       
+            <form id="myform" onsubmit="return validarFormulario();"name= eventos action="./inscripcion.php" method="post" id="formulario">       
                 <h3>Nombre y 1ª Apellido:</h3>
                 <span class="obligatorio">*</span>
                 <input type="text" name="nombreApellido" id="name" required="obligatorio" placeholder="Escribe tu Nombre y Apellido">
@@ -123,7 +123,7 @@
                 <div class="terms-container">
                     <div class="terms-checkbox-container">
                         
-                        <input class="acceptterms" type="checkbox" name="condiciones" value="agree_terms" id="terminos" onsubmit="return validarTerminos();">
+                        <input class="acceptterms" type="checkbox" name="condiciones" value="agree_terms" id="terms" onsubmit="return validarFormulario();">
                      </div>
                     <div class="terms-text-container">
                         Acepto los Términos y Condiciones
