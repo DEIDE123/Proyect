@@ -90,7 +90,7 @@ if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
 //sql format
-$sql = "INSERT INTO particular (nombreApellido, , email, telefono, evento)
+$sql = "INSERT INTO particular (nombreApellido, email, telefono, evento)
 VALUES ('$nombreApellido', '$email', '$telefono','$evento' )";
 
 

@@ -9,8 +9,8 @@ function validate(){
   error_message.style.padding = "10px";
   
   var text;
-  if(name.length < 8){
-    text = " Escribe Más de 8 carácteres ";
+  if(name.length < 6){
+    text = " Escribe Más de 6 carácteres ";
     error_message.innerHTML = text;
     return false;
   }
