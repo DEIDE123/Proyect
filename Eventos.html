@@ -14,6 +14,8 @@
     <script src="./js/owl.carousel.min.js"></script>
 
     <!-- ------------ AOS js Library  ------------------------- -->
+    <!-- Custom js for email  -->
+    <script src="./js/email.js"> </script> 
     <script src="./js/aos.js"></script>
 
     <!-- Custom Javascript file -->
@@ -294,10 +296,12 @@
                 <h2>Informaté</h2>
                 <p>Ponte al día</p>
                 <div class="form-element">
-                    <form name=eventos action="./spam.php" method="post">
-                        <input type="text" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                        <span><input type="submit" id="email" class="fas fa-chevron-right" onclick="validarEmail(document.getElementById('email').value)"></input></span>
-                    </form>
+                    <div class="form-element">
+                        <form onsubmit="return validarEmail()"  name="eventos" action="./spam.php" method="post">
+                            <input type="text" name="email" id="email"  placeholder="Escribe tu Email">
+                            <span><input type="submit"  class="fas fa-chevron-right" ></input></span>
+                        </form>
+                    </div>
                 </div>
             </div>
 

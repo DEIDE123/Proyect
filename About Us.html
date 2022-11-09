@@ -14,6 +14,8 @@
     <script src="./js/owl.carousel.min.js"></script>
 
     <!-- ------------ AOS js Library  ------------------------- -->
+    <!-- Custom js for email  -->
+    <script src="./js/email.js"> </script> 
     <script src="./js/aos.js"></script>
 
     <!-- Custom Javascript file -->
@@ -260,7 +262,7 @@
                                         in a team and I feel able to cover and manage large territories.
                                     </p> 
                                     <a class="_blank" href="./assets/Curriculums/danielCurriculum.pdf"><i class="fa fa-book fa-fw" aria-hidden="true"></i>
-                                    <a target="_blank"href="https://www.linkedin.com/in/daniel-azurduy-montalvo-70aba5244/"><i class="fab fa-linkedin"></i></a>
+                                    <a target="_blank" href="https://www.linkedin.com/in/daniel-azurduy-montalvo-70aba5244/"><i class="fab fa-linkedin"></i></a>
                                     
                                 </div>
                             </div>
@@ -301,9 +303,9 @@
                 <h2>Informaté</h2>
                 <p>Ponte al día</p>
                 <div class="form-element">
-                    <form name=eventos action="./spam.php" method="post">
-                        <input type="text" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                        <span><input type="submit" id="email" class="fas fa-chevron-right" onclick="validarEmail(document.getElementById('email').value)"></input></span>
+                    <form onsubmit="return validarEmail()"  name="eventos" action="./spam.php" method="post">
+                        <input type="text" name="email" id="email"  placeholder="Escribe tu Email">
+                        <span><input type="submit"  class="fas fa-chevron-right" ></input></span>
                     </form>
                 </div>
             </div>

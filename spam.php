@@ -28,7 +28,7 @@ $sql = "INSERT INTO folleto (email)
 VALUES ('$email')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Dado de alta satisfactoriamente, ahora estaras simpre informado de nuevos eventos";
+  echo "Dado de alta satisfactoriamente, ahora estarás simpre informado de nuevos eventos";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

@@ -15,6 +15,8 @@
 
     <!-- ------------ AOS js Library  ------------------------- -->
     <script src="./js/aos.js"></script>
+    <!-- Custom js for email  -->
+    <script src="./js/email.js"> </script> 
 
     <!-- Custom Javascript file -->
     <script src="./js/main.js"></script>
@@ -364,9 +366,9 @@
                 <h2>Informaté</h2>
                 <p>Ponte al día</p>
                 <div class="form-element">
-                    <form name=eventos action="./spam.php" method="post">
-                        <input type="text" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                        <span><input type="submit" id="email" class="fas fa-chevron-right" onclick="validarEmail(document.getElementById('email').value)"></input></span>
+                    <form onsubmit="return validarEmail()"  name="eventos" action="./spam.php" method="post">
+                        <input type="text" name="email" id="email"  placeholder="Escribe tu Email">
+                        <span><input type="submit"  class="fas fa-chevron-right" ></input></span>
                     </form>
                 </div>
             </div>
@@ -394,27 +396,10 @@
             <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
         </div>
     </footer>
-    <script>
-        function validarEmail(){
-            var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-            var esValido=expReg.test(email);
-            if(esValido==true){
-                alert('El email es válido')
-            }
-            else{
-                alertalert('El email NO es válido')
-            }
-
-
-
-        }
-    </script>
-
+    
     <!-- -------------x------------- Footer --------------------x------------------- -->
 
 
 </body>
- <!-- Custom Style   -->
- <link  href="./js/email.js">
 
 </html>
