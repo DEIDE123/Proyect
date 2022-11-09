@@ -4,11 +4,11 @@ function  terms() {
     error_message.style.padding = "10px";
     var text;
 
-    if (terms.checked) {
+    if $('terms').attr ('checked', false){
     text = " Acepta los términos y servicios ";
     error_message.innerHTML = text;
     return false;
-}
+    }
 
     alert("Se han guardado los datos correctamente!");
     return true;
