@@ -19,9 +19,9 @@
     <script src="./js/aos.js"></script>
  
     <!-- Custom Javascript file -->
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js"> </script>
     <!--php-->
-    <script src="./js/php.js"></script>
+    <script src="./js/php.js">  </script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="./css/all.css">
 
@@ -93,7 +93,7 @@
                   <h1>Inscripcion</h1>
                 </div>
                 
-            <form id="myform" name= eventos action="./inscripcion.php" method="post" id="formulario">       
+            <form id="myform" onsubmit="return validarFormulario();" name= eventos action="./inscripcion.php" method="post" id="formulario">       
                 <h3>Nombre y 1ª Apellido:</h3>
                 <span class="obligatorio">*</span>
                 <input type="text" name="nombreApellido" id="name" required="obligatorio" placeholder="Escribe tu Nombre y Apellido">
@@ -121,7 +121,7 @@
                 <div class="terms-container">
                     <div class="terms-checkbox-container">
                         
-                        <input class="temrs" type="checkbox" name="temrs" value="terms" id="terms" onclick="return validarFormulario();">
+                        <input class="acceptterms" type="checkbox" name="condiciones" value="agree_terms" id="terms" onsubmit="return validarFormulario();">
                      </div>
                     <div class="terms-text-container">
                         Acepto los Términos y Condiciones
